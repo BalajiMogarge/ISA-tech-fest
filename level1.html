@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level 1 - Speed Typing | ISA Tech Fest</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/level1.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo-container">
+            <img src="images/isa_dypcoe_logo.jpg" class="logo-img" alt="Logo" />
+            <div class="logo-text">IntellexAI Student Association</div>
+            <div id="userBadge" class="user-badge"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="game-section">
+        <div class="container">
+          <div class="level-badge">Level 1</div>
+          <h1 class="game-title">Super Speed</h1>
+          <p class="game-description">
+            Type the given superhero quote or code snippet as accurately and
+            quickly as possible.
+          </p>
+
+          <div class="typing-container">
+            <div id="textToType" class="text-to-type">
+              "With great power comes great responsibility." - Spider-Man
+            </div>
+            <textarea
+              id="typingArea"
+              class="typing-area"
+              placeholder="Start typing here..."
+              disabled
+            ></textarea>
+
+            <div class="stats-container">
+              <div class="stat-item">
+                <span id="accuracy" class="stat-number">100</span>
+                <span class="stat-label">Accuracy %</span>
+              </div>
+              <div class="stat-item">
+                <span id="timer" class="stat-number">0</span>
+                <span class="stat-label">Time Taken (s)</span>
+              </div>
+            </div>
+
+            <div class="control-buttons">
+              <button id="startBtn" class="btn btn-primary">
+                Start Challenge
+              </button>
+              <button id="resetBtn" class="btn btn-secondary">Reset</button>
+            </div>
+          </div>
+
+          <div id="resultSection" class="result-section">
+            <h2>🎉 Congratulations!</h2>
+            <p>You completed the challenge in</p>
+            <div class="finalTimeP" id="finalTime">0</div>
+            <a href="Level2.html" class="next-level-btn">Proceed to Level 2</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 ISA Tech Fest. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/level1.js"></script>
+  </body>
+</html>

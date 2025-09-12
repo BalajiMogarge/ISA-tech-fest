@@ -1,0 +1,37 @@
+/* Level 2 specific styles */
+
+.instructions {
+  color: #ccc;
+  margin-bottom: 16px;
+}
+
+.scramble-list {
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.scramble-item {
+  background: #0f0f0f;
+  border: 1px solid #333;
+  padding: 14px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  font-family: "Courier New", monospace;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.scramble-line {
+  flex: 1;
+  color: #e0e0e0;
+  margin-right: 12px;
+}
+
+.time-taken {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 20px 0;
+  font-family: "Courier New", monospace;
+}

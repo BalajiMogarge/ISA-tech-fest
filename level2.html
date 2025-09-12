@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level 2 - Code Scramble | ISA Tech Fest</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/level2.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo-container">
+            <img
+              src="images/isa_dypcoe_logo.jpg"
+              alt="IntellexAI Logo"
+              class="logo-img"
+            />
+            <div class="logo-text">IntellexAI Student Association</div>
+            <div id="userBadge" class="user-badge"></div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="game-section">
+        <div class="container">
+          <div class="level-badge">Level 2</div>
+          <h1 class="game-title">Code Scramble</h1>
+          <p class="game-description">
+            Participants are given a jumbled code snippet. Rearrange the lines
+            in the correct order and submit. Solve correctly to proceed.
+          </p>
+
+          <div class="typing-container" id="gameArea">
+            <div id="instructions" class="instructions">
+              Rearrange the lines using the <strong>↑</strong> and
+              <strong>↓</strong> buttons. When you're satisfied, click
+              <strong>Check Answer</strong>.
+            </div>
+
+            <ul
+              id="scrambledList"
+              class="scramble-list"
+              aria-live="polite"
+            ></ul>
+
+            <div class="control-buttons">
+              <button id="startBtn" class="small-btn">Start Challenge</button>
+              <button id="checkBtn" class="small-btn" disabled>
+                Check Answer
+              </button>
+              <button id="resetBtn" class="small-btn" disabled>Reset</button>
+            </div>
+          </div>
+
+          <div class="result-section" id="resultSection">
+            <h2>🎉 Congratulations!</h2>
+            <p>You completed the challenge in:</p>
+            <div class="time-taken" id="timeTaken">0s</div>
+            <a href="Level3.html" class="next-level-btn">Proceed to Level 3</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 ISA Tech Fest. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/level2.js"></script>
+  </body>
+</html>

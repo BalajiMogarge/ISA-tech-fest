@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Superhero Gauntlet</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo-container">
+            <a href="index.html"
+              ><img
+                src="images/isa_dypcoe_logo.jpg"
+                alt="Logo"
+                class="logo-img"
+            /></a>
+            <div class="logo-text">IntellexAI Student Association</div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="container">
+          <h1>Superhero Gauntlet</h1>
+          <p>Test your skills across challenging levels</p>
+        </div>
+      </section>
+
+      <section class="games-section">
+        <div class="container">
+          <h2 class="section-title">Three Levels of Competition</h2>
+          <div class="games-grid">
+            <div class="game-card level1">
+              <div class="game-number">Level 1</div>
+              <h3 class="game-title">Speed Typing Challenge</h3>
+              <p class="game-description">
+                Test your typing speed and accuracy with coding snippets and
+                technical quotes. You'll need to maintain both speed and
+                precision to advance to the next level. Time limit: 5 minutes.
+              </p>
+            </div>
+
+            <div class="game-card level2">
+              <div class="game-number">Level 2</div>
+              <h3 class="game-title">Code & Memory Battle</h3>
+              <p class="game-description">
+                Solve a scrambled code snippet by arranging and executing it
+                correctly. Test your programming skills, memory, and logic. The
+                successful participant earns the second pass number.
+              </p>
+            </div>
+
+            <div class="game-card level3">
+              <div class="game-number">Level 3</div>
+              <h3 class="game-title">Brainpower Showdown</h3>
+              <p class="game-description">
+                Predict the output of a tricky code snippet quickly. Logical
+                reasoning and sharp focus are essential. The first correct
+                answer secures the third pass number.
+              </p>
+            </div>
+          </div>
+          <div class="login-section">
+            <h3 class="login-title">Ready to compete?</h3>
+            <form id="loginForm">
+              <div class="form-group">
+                <label class="form-label" for="userId">Participant ID</label>
+                <input
+                  type="text"
+                  id="userId"
+                  class="form-input"
+                  placeholder="Enter your participant ID"
+                  required
+                />
+              </div>
+              <button type="submit" class="start-button">
+                Start Competition
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 ISA Tech Fest. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

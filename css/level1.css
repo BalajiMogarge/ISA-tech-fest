@@ -1,0 +1,61 @@
+/* Level 1 specific styles */
+
+.text-to-type {
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  line-height: 1.8;
+  background: #0f0f0f;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 24px;
+  margin-bottom: 32px;
+  color: #e0e0e0;
+  user-select: none;
+}
+
+.typing-area {
+  width: 100%;
+  font-family: "Courier New", monospace;
+  font-size: 18px;
+  background: #0f0f0f;
+  border: 2px solid #333;
+  border-radius: 8px;
+  margin: 16px 0px;
+  padding: 24px;
+  color: #fff;
+  min-height: 120px;
+  resize: vertical;
+}
+
+.stats-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.stat-item {
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.stat-label {
+  font-size: 14px;
+  color: #888;
+}
+
+.finalTimeP {
+  font-size: 40px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 20px 0;
+  font-family: "Courier New", monospace;
+}
