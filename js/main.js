@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
       if (id) {
         // Store participant ID using sessionStorage
         sessionStorage.setItem('participantId', id);
-        window.location.href = 'Level1.html';
+        window.location.href = 'level1.html';
       } else {
         alert('Please enter your participant ID');
       }
