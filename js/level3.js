@@ -88,6 +88,9 @@ print(reverse_name("SUPERMAN"))`,
       clearInterval(interval);
       finalTimeEl.textContent = timer + 's';
       resultSection.classList.add('show');
+      
+      // Save participant score
+      updateParticipantScore('level3', 100, timer);
     } else {
       alert('❌ Incorrect. Try again!');
     }
@@ -99,4 +102,39 @@ print(reverse_name("SUPERMAN"))`,
       submitBtn.click();
     }
   });
+
+  // Participant tracking function
+  function updateParticipantScore(level, accuracy, time) {
+    const participantId = sessionStorage.getItem('participantId');
+    if (!participantId) return;
+
+    const storedParticipants = localStorage.getItem('isaTechFestParticipants');
+    if (!storedParticipants) return;
+    
+    let participants = JSON.parse(storedParticipants);
+    const participant = participants.find(p => p.id === participantId);
+    
+    if (participant) {
+      participant.scores[level] = {
+        accuracy,
+        time,
+        completed: true,
+        timestamp: new Date().toISOString()
+      };
+      
+      participant.lastActivity = new Date().toISOString();
+      
+      // Calculate total score
+      let totalScore = 0;
+      Object.values(participant.scores).forEach(score => {
+        if (score.completed) {
+          const speedBonus = Math.max(0, 100 - score.time);
+          totalScore += (score.accuracy * 100) + speedBonus;
+        }
+      });
+      participant.totalScore = Math.round(totalScore);
+      
+      localStorage.setItem('isaTechFestParticipants', JSON.stringify(participants));
+    }
+  }
 });

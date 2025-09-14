@@ -185,6 +185,43 @@ class CodeScramble {
     if (success) {
       this.timeTakenEl.textContent = this.elapsedTime + 's';
       this.resultSection.classList.add('show');
+      
+      // Save participant score
+      this.updateParticipantScore('level2', 100, this.elapsedTime);
+    }
+  }
+
+  updateParticipantScore(level, accuracy, time) {
+    const participantId = sessionStorage.getItem('participantId');
+    if (!participantId) return;
+
+    const storedParticipants = localStorage.getItem('isaTechFestParticipants');
+    if (!storedParticipants) return;
+    
+    let participants = JSON.parse(storedParticipants);
+    const participant = participants.find(p => p.id === participantId);
+    
+    if (participant) {
+      participant.scores[level] = {
+        accuracy,
+        time,
+        completed: true,
+        timestamp: new Date().toISOString()
+      };
+      
+      participant.lastActivity = new Date().toISOString();
+      
+      // Calculate total score
+      let totalScore = 0;
+      Object.values(participant.scores).forEach(score => {
+        if (score.completed) {
+          const speedBonus = Math.max(0, 100 - score.time);
+          totalScore += (score.accuracy * 100) + speedBonus;
+        }
+      });
+      participant.totalScore = Math.round(totalScore);
+      
+      localStorage.setItem('isaTechFestParticipants', JSON.stringify(participants));
     }
   }
 

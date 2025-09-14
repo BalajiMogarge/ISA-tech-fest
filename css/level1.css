@@ -52,10 +52,24 @@
   color: #888;
 }
 
+.finalStats {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.finalAccuracyP {
+  font-size: 40px;
+  font-weight: 700;
+  color: #4CAF50;
+  font-family: "Courier New", monospace;
+}
+
 .finalTimeP {
   font-size: 40px;
   font-weight: 700;
-  color: #ffffff;
-  margin: 20px 0;
+  color: #2196F3;
   font-family: "Courier New", monospace;
 }

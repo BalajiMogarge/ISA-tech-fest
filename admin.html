@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel - ISA Tech Fest</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/admin.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <nav class="nav">
+          <div class="logo-container">
+            <img src="images/isa_dypcoe_logo.jpg" class="logo-img" alt="Logo" />
+            <div class="logo-text">ISA Tech Fest - Admin Panel</div>
+            <div class="admin-badge">ADMIN</div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="admin-section">
+        <div class="container">
+          <div class="admin-header">
+            <h1 class="admin-title">🏆 Admin Dashboard</h1>
+            <p class="admin-subtitle">Monitor active participants and their progress</p>
+          </div>
+
+          <div class="stats-overview">
+            <div class="stat-card">
+              <div class="stat-icon">👥</div>
+              <div class="stat-content">
+                <div class="stat-number" id="totalParticipants">0</div>
+                <div class="stat-label">Total Participants</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🎯</div>
+              <div class="stat-content">
+                <div class="stat-number" id="activeParticipants">0</div>
+                <div class="stat-label">Currently Active</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">🏅</div>
+              <div class="stat-content">
+                <div class="stat-number" id="completedLevels">0</div>
+                <div class="stat-label">Levels Completed</div>
+              </div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon">⚡</div>
+              <div class="stat-content">
+                <div class="stat-number" id="avgAccuracy">0%</div>
+                <div class="stat-label">Average Accuracy</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="participants-section">
+            <div class="section-header">
+              <h2>📊 Participant Progress</h2>
+              <div class="filter-controls">
+                <select id="levelFilter" class="filter-select">
+                  <option value="all">All Levels</option>
+                  <option value="level1">Level 1</option>
+                  <option value="level2">Level 2</option>
+                  <option value="level3">Level 3</option>
+                </select>
+                <button id="refreshBtn" class="btn btn-primary">🔄 Refresh</button>
+                <button id="clearDataBtn" class="btn btn-warning">🗑️ Clear All Data</button>
+              </div>
+            </div>
+
+            <div class="participants-table-container">
+              <table class="participants-table">
+                <thead>
+                  <tr>
+                    <th>Participant ID</th>
+                    <th>Current Level</th>
+                    <th>Status</th>
+                    <th>Level 1 Score</th>
+                    <th>Level 2 Score</th>
+                    <th>Level 3 Score</th>
+                    <th>Total Score</th>
+                    <th>Last Activity</th>
+                  </tr>
+                </thead>
+                <tbody id="participantsTableBody">
+                  <!-- Dynamic content will be inserted here -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="level-breakdown">
+            <h2>📈 Level Performance</h2>
+            <div class="level-cards">
+              <div class="level-card">
+                <div class="level-header">
+                  <h3>Level 1 - Speed Typing</h3>
+                  <span class="level-badge">Spider-Man</span>
+                </div>
+                <div class="level-stats">
+                  <div class="level-stat">
+                    <span class="stat-value" id="level1Participants">0</span>
+                    <span class="stat-desc">Participants</span>
+                  </div>
+                  <div class="level-stat">
+                    <span class="stat-value" id="level1AvgTime">0s</span>
+                    <span class="stat-desc">Avg Time</span>
+                  </div>
+                  <div class="level-stat">
+                    <span class="stat-value" id="level1AvgAccuracy">0%</span>
+                    <span class="stat-desc">Avg Accuracy</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="level-card">
+                <div class="level-header">
+                  <h3>Level 2 - Memory Challenge</h3>
+                  <span class="level-badge">Batman</span>
+                </div>
+                <div class="level-stats">
+                  <div class="level-stat">
+                    <span class="stat-value" id="level2Participants">0</span>
+                    <span class="stat-desc">Participants</span>
+                  </div>
+                  <div class="level-stat">
+                    <span class="stat-value" id="level2AvgTime">0s</span>
+                    <span class="stat-desc">Avg Time</span>
+                  </div>
+                  <div class="level-stat">
+                    <span class="stat-value" id="level2AvgAccuracy">0%</span>
+                    <span class="stat-desc">Avg Accuracy</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="level-card">
+                <div class="level-header">
+                  <h3>Level 3 - Logic Puzzle</h3>
+                  <span class="level-badge">Iron Man</span>
+                </div>
+                <div class="level-stats">
+                  <div class="level-stat">
+                    <span class="stat-value" id="level3Participants">0</span>
+                    <span class="stat-desc">Participants</span>
+                  </div>
+                  <div class="level-stat">
+                    <span class="stat-value" id="level3AvgTime">0s</span>
+                    <span class="stat-desc">Avg Time</span>
+                  </div>
+                  <div class="level-stat">
+                    <span class="stat-value" id="level3AvgAccuracy">0%</span>
+                    <span class="stat-desc">Avg Accuracy</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 ISA Tech Fest. All rights reserved. | Admin Panel</p>
+      </div>
+    </footer>
+
+    <script src="js/admin.js"></script>
+  </body>
+</html>
